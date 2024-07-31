@@ -4,7 +4,6 @@ import path from "path";
 import { bundleMDX } from 'mdx-bundler'
 import cors from 'cors'
 
-
 export const app = express();
 
 app.use(cors())
