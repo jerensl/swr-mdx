@@ -1,0 +1,7 @@
+{
+    "watch": ["src"],
+    "ignore": ["src/**/*.test.ts", "node_modules"],
+    "ext": "ts,mjs,js,json,graphql",
+    "exec": "esbuild src/app.ts --bundle --platform=node --external:mdx-bundler --outfile=./build/app.js && node ./build/app.js",
+    "legacyWatch": true
+  }

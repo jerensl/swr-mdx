@@ -1,0 +1,29 @@
+{
+  "name": "server-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "esbuild src/app.ts --bundle --platform=node --external:mdx-bundler --outfile=server-out.js",
+    "build:binary": "esbuild src/app.ts --bundle --platform=node --external:mdx-bundler --outfile=server-out.js",
+    "start": "node ./build/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mdx-bundler": "^10.0.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.13.15",
+    "esbuild-node-tsc": "^2.0.5",
+    "nodemon": "^3.1.4",
+    "typescript": "^5.5.4"
+  }
+}
